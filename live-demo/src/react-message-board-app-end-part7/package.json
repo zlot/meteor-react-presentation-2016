@@ -1,0 +1,16 @@
+{
+  "name": "react-message-board-app",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "material-ui": "^0.16.1",
+    "meteor-node-stubs": "~0.2.0",
+    "moment": "^2.15.2",
+    "react": "^15.3.2",
+    "react-addons-pure-render-mixin": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-tap-event-plugin": "^1.0.0"
+  }
+}

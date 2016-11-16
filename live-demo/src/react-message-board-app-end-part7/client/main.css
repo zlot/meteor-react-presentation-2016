@@ -1,0 +1,26 @@
+/* CSS declarations go here */
+body {
+  font-family: 'Helvetica', Arial;
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+ul {
+  background-color: #f6f6f6;
+  padding: 0.9rem 0.8rem;
+  overflow: hidden;
+}
+li {
+  padding: 10px 20px;
+  float: left;
+  clear: both;
+  border-radius: 17px;
+  margin-bottom: 0.2rem;
+  background-color: #36a9fc;
+  color: #fff;
+}
+
+input {
+  width: 100%;
+}
