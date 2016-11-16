@@ -1,0 +1,20 @@
+{
+  "name": "meteor-react-presentation-sydney-tafe-2016-slides",
+  "version": "1.0.0",
+  "description": "Slides for my Meteor + React presentation given to Sydney TAFE students in November 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "meteor",
+    "react",
+    "presentation",
+    "tutorial"
+  ],
+  "author": "Mark C Mitchell",
+  "license": "ISC",
+  "dependencies": {
+    "reveal.js": "^3.3.0"
+  }
+}

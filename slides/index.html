@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Meteor + React, presentation by Mark C Mitchell</title>
+
+		<meta name="description" content="Meteor + React presentation at Sydney Ultimo TAFE, 2016">
+		<meta name="author" content="Mark C Mitchell">
+		<meta name="author" content="Some content modified from Rob Fisher">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="node_modules/reveal.js/css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="assets/css/custom.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="assets/css/zenburn.css">
+
+		<script src="node_modules/reveal.js/js/reveal.js"></script>
+		<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function(e) {
+				Reveal.initialize({
+					controls: true,
+					progress: true,
+					history: true,
+					center: true,
+					theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+					transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+					dependencies: [
+						{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Meteor</h1>
+					<h3>The JavaScript App Platform.</h3>
+					<hr>
+
+					<p>
+						<small>Talk by <a target="_blank" href="http://www.markcmitchell.net">Mark C Mitchell</a> | <a target="_blank" href="http://twitter.com/zlot">@zlot</a></small>
+					</p>
+					<p>
+						<small>Slides modifed from a talk made by <a target="_blank" href="http://www.robfisher.us">Rob Fisher</a> / <a target="_blank" href="http://twitter.com/bler">@bler</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Me</h2>
+					<h4> <a target="_blank" href="http://markcmitchell.net">Mark C Mitchell</a> | <a target="_blank" href="http://www.twitter.com/zlot">@zlot</a></h4>
+					<hr>
+
+					<p>Creative Technologist & Interactive Artist
+					</p>
+					<hr>
+
+					<p>Teacher of Web-Based Technologies here at Ultimo<br>(Design, HTML/CSS, Usability)
+					</p>
+					<hr>
+
+					<p>Co-lecturer of the Master of Interaction Design & Electronic Arts Studio, Sydney University
+					</p>
+					<hr>
+
+					<p>Co-founder of The Sydney Interactive Arts Meetup<br>
+						<a href="http://www.meetup.com/Sydney-Interactive-Arts-Meetup/">www.meetup.com/Sydney-Interactive-Arts-Meetup</a>
+					</p>
+					</ul>
+
+					</ul>
+				</section>
+
+
+				<section>
+					<img src='assets/imgs/meteor-logo.svg' />
+					<hr>
+					<h2>What Is Meteor?</h2>
+					<hr>
+
+					<p>Meteor is a full-stack JavaScript App Platform that assembles all the pieces you need to build modern web and mobile apps, with a single JavaScript codebase.</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>One language everywhere</h4>
+						<p>The same code, written in the same language, can run on both client and server.
+						<p>
+					</section>
+
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Pure Javascript</h4>
+						<p>Only one language for the client and server</p>
+						<p>Code can run on the client or server</p>
+						<p>Learn one set of APIs / libraries</p>
+					</section>
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Great Documentation</h4>
+						<a target="_blank" href="http://docs.meteor.com/"><img src="assets/imgs/meteor-documentation.png" /></a>
+					</section>
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Live Updates</h4>
+						<p>Data updates live on the screen as it changes</p>
+						<p>i.e., both your changes and the changes made by other users are instantly reflected in the UI</p>
+					</section>
+
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Ultra Responsive</h4>
+						<p>Changes made by a user are instantly visible, without having to wait <br>for a round trip to the server</p>
+					</section>
+
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Hot Code Pushes</h4>
+						<p>When new code is released it is automatically injected into <br>existing clients. No refreshing, no reconnecting!</p>
+					</section>
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Sensitive Code Protection</h4>
+						<p>Client UI code runs in the browser<p>
+						<p>Sensitive code runs in a privileged environment on the server</p>
+						<p>Best practices are baked right into the framework</p>
+					</section>
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Modular design</h4>
+						<p>Modularity of packages encourage best-practice coding, and make adding new features ultra-simple</p>
+						<p>Command-line app is a build tool that builds all parts of your app</p>
+					</section>
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Database integration</h4>
+						<p>A <code>mongoDB</code> database is automatically hooked up on server-side, <br>and magically reactive on the front-end</p>
+					</section>
+					<section>
+						<img src='assets/imgs/meteor-logo.svg' />
+						<hr>
+						<h2>Why Meteor?</h2>
+						<hr>
+						<h4>Accounts</h4>
+						<p>A complete user account system that you can drop <br>into your application</p>
+						<p>With one line of code you can have login/logout, account creation, email validation, and login with Facebook, Twitter, etc</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Installation</h2>
+					<hr>
+					<h4>One simple command installs meteor and dependencies!</h4>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						$ curl https://install.meteor.com/ | sh
+					</code></pre>
+					<hr>
+					<p>Scared of the command line? Don't be!</p>
+				</section>
+
+				<section>
+					<h2>Package Management</h2>
+					<hr>
+					<h4>Adding packages is easy</h4>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+$ meteor add bootstrap
+$ meteor add accounts-ui
+$ meteor add fortawesome:fontawesome
+$ meteor add jeremy:velocity-animate
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>npm packages too</h2>
+					<hr>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+$ meteor npm install bootstrap --save
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Start A New Project</h2>
+					<hr>
+					<h4>One command to bootstrap a new project!</h4>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+$ meteor create name-of-project
+$ cd name-of-project
+$ meteor
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Meteor in action</h2>
+					<hr>
+					<p>Meteor comes with complete sample projects useful <br>for getting started.</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+$ meteor create --example todo
+					</code></pre>
+
+				</section>
+
+				<section>
+					<h2>Conclusion</h2>
+					<hr>
+					<p>Meteor is a web framework that takes the pain out of writting web applications.</p>
+					<p>
+					An entire set of tools to write a reactive web app, that makes the plumbing as simple as possible.</p>
+					<p>Visit <a target="_blank" href="http://www.meteor.com/">Meteor</a> for more info.
+				</section>
+
+				<section>
+					<h2>React</h2>
+					<hr>
+					<p><img src='assets/imgs/React.js_logo.svg' /></p>
+				</section>
+
+				<section>
+					<h2>What is React?</h2>
+					<hr>
+					<p><img src='assets/imgs/what-is-react.png' /></p>
+				</section>
+
+				<section>
+					<h2>JSX</h2>
+					<hr>
+					<p><img src='assets/imgs/jsx.png' /></p>
+				</section>
+
+				<section>
+					<p><img src='assets/imgs/react-first-impressions.png' /></p>
+					<span>Image credit: <a href='http://www.slideshare.net/AndrewHull/react-js-and-why-its-awesome'>Andrew Hull</a></span>
+				</section>
+
+				<section>
+					<p><img src='assets/imgs/react-flow-Ping-Wen (Mark) Hsu.png' /></p>
+					<span>Image credit: Ping-Wen (Mark) Hsu</span>
+				</section>
+
+				<section>
+					<p><img src='assets/imgs/unidirectional-data-flow.png' /></p>
+					<span>Image credit: Microsoft Virtual Academy</span>
+				</section>
+
+				<section>
+					<span>Image credit: <a href='http://www.slideshare.net/AndrewHull/react-js-and-why-its-awesome'>Andrew Hull</a></span>
+2					<p><img src='assets/imgs/only-components.png' /></p>
+				</section>
+
+				<section>
+					<h2>That's really most of React!</h2>
+					<hr>
+					<p><img src='assets/imgs/React.js_logo.svg' /></p>
+					<!--<p>Except state, lifecycle methods, the virtual DOM, proptypes, flux, redux … /> -->
+				</section>
+
+			</div>
+
+		</div>
+
+
+	</body>
+</html>
