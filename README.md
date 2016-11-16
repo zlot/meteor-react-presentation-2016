@@ -5,6 +5,8 @@ Building off a talk I gave about Meteor in September 2015 for students at Sydney
 
 
 
+Live demo session is inspired by the work of Paul Dowman of OK GROW!, where he gave a talk about [building
+a live chat app in 40 minutes with React and Meteor](https://www.youtube.com/watch?v=xcej5OboUVM).  
 
 
 Some points in the Meteor section of the presentation modified from [zombiebaron](https://github.com/zlot/TechLancaster-Meteor-Talk)'s MeteorJS TechLancaster Talk.
