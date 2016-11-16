@@ -3,7 +3,10 @@ By [Mark C Mitchell](http://www.markcmitchell.net), for students at Sydney Ultim
 
 Building off a talk I gave about Meteor in September 2015 for students at Sydney Ultimo TAFE, September 2015.
 
-Code modified from:
+
+
+
+Some points in the Meteor section of the presentation modified from:
 
 ## MeteorJS TechLancaster Talk
 series of slides for use with presentation for @TechLancaster talk
