@@ -6,8 +6,5 @@ Building off a talk I gave about Meteor in September 2015 for students at Sydney
 
 
 
-Some points in the Meteor section of the presentation modified from:
 
-## MeteorJS TechLancaster Talk
-series of slides for use with presentation for @TechLancaster talk
-for September 2014, by [zombiebaron](https://github.com/zlot/TechLancaster-Meteor-Talk).
+Some points in the Meteor section of the presentation modified from [zombiebaron](https://github.com/zlot/TechLancaster-Meteor-Talk)'s MeteorJS TechLancaster Talk.
